@@ -1,0 +1,50 @@
+spring:
+  application:
+    name: wealthtrack-backend
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/wealthtrack_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+# JWT Configuration
+app:
+  security:
+    jwt:
+      secret: ${JWT_SECRET:04ca023b39512e46d0c2cf4b48d5aac61d34302994c87ed4eff225dcf3b0a218739f3897051a057f9b846a69ea2927a587044164b7bae5e1306219d50b588cb1}
+      expiration: 86400000  # 24 hours in milliseconds
+      refresh-expiration: 604800000  # 7 days in milliseconds
+
+# Logging Configuration
+logging:
+  level:
+    root: INFO
+    com.wealthtrack: DEBUG
+    org.springframework.web: INFO
+    org.hibernate: INFO
+
+# API Documentation
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method

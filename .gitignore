@@ -1,0 +1,99 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+logs/
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Virtual machine crash logs
+hs_err_pid*
+replay_pid*
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# IDE - VS Code
+.vscode/
+.code-workspace
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Spring Boot
+.springBeans
+spring-test/test-output/
+.spring-*/
+
+# Application properties with secrets
+/src/main/resources/application-secrets.yml
+/src/main/resources/application-secrets.properties
+/src/main/resources/application-local.yml
+/src/main/resources/application-local.properties
+
+# Database files
+*.db
+*.sqlite
+*.h2.db
+
+# Node (if using a frontend build)
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+
+# Generated documentation
+/doc/
+
+# Docker
+docker-compose.override.yml
+
+# Temporary files
+*~
+*.bak
+*.swp
+*.tmp
+tmp/
+temp/
+
+# Sensitive or high-churn files
+.env
+.envrc
+secrets.yml
+secrets.properties
